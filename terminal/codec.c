@@ -2,10 +2,9 @@
 int main(int argc, char const *argv[])
     {
 
-        int a;
-float b;
-        scanf("%d %f",&a,&b);
-        printf("Welcome To my CEditor! %d %.2f",a,b);
+        int a,b;
+        scanf("%d %d",&a,&b);
+        printf("Welcome To my CEditor! %d %d",a,b);
         return 0;
     }
 
