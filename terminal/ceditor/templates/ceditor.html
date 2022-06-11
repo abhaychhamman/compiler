@@ -1,0 +1,80 @@
+ {% extends "basic.html" %} {% block textarea %}
+<div class="leftside">
+
+    <button class="Run">Run</button>
+
+    <textarea name="textarea" id="textarea" spellcheck="false">
+#include &#60;stdio.h&#62;
+int main(int argc, char const *argv[])
+    {
+
+        int a,b;
+        scanf("%d %d",&a,&b);
+        printf("Welcome To my CEditor! %d %d",a,b);
+        return 0;
+    }
+
+
+    </textarea>
+
+
+</div>
+<div class="rightside">
+
+    <div class="rtop">
+
+        <button class="opt">Output</button>
+        <input type="text" placeholder="enter stdin" id="stdin">
+    </div>
+    <div name="terminal" id="terminal"></div>
+
+</div>
+
+<pre>
+   
+        
+</pre>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+    let Run = document.getElementsByClassName('Run')
+    let terminal = document.getElementById('terminal')
+    let tarea = document.getElementById('textarea')
+    let stdin = document.getElementById('stdin')
+
+    Run[0].addEventListener('click', (e) => {
+
+        let str = ""
+        let ip = stdin.value.split(",")
+        for (let i = 0; i < ip.length; i++) {
+
+            if (stdin.value.split(",")[i] != "") {
+                str += ip[i] + "\n"
+
+
+            }
+
+
+        }
+
+
+        my_data = {
+            code: tarea.value,
+            stdin: str
+        };
+        $.ajax({
+
+            url: "{% url 'save' %}",
+            method: "POST",
+            data: my_data,
+            success: function(data) {
+
+                terminal.innerText = data.status
+            }
+
+        })
+    })
+</script>
+
+{% endblock textarea %}

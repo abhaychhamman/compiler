@@ -1,0 +1,67 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ #textarea {
+     resize: none;
+     outline: none;
+     background-color: #171211;
+     color: #1cc7ff;
+     font-size: 19px;
+     height: 550px;
+     font-weight: 600;
+     width: 100%;
+     border-radius: 10px;
+     border: 11px solid purple;
+ }
+ 
+ #terminal {
+     background-color: #000;
+     color: #fff;
+     font-size: 19px;
+     height: 550px;
+     font-weight: 700;
+     width: 100%;
+     padding: 10px;
+     border-radius: 10px;
+     border: 11px solid green;
+ }
+ 
+ .Run {
+     background: blue;
+     font-size: 26px;
+     border: none;
+     margin: 4px;
+     color: white;
+     font-weight: 600;
+ }
+ 
+ .opt {
+     background: green;
+     font-size: 26px;
+     border: none;
+     margin: 4px;
+     color: white;
+     font-weight: 600;
+ }
+ 
+ .rtop {
+     display: flex;
+     justify-content: space-between;
+     /* padding: 2px; */
+     box-sizing: border-box;
+ }
+ 
+ #stdin {
+     width: 74%;
+     border-radius: 9px;
+     text-indent: 10px;
+     margin: 6px;
+     text-transform: capitalize;
+ }
+ 
+ .opt,
+ .Run {
+     padding: 2px 14px 2px 13px;
+ }
