@@ -32,7 +32,7 @@
      background: blue;
      font-size: 26px;
      border: none;
-     margin: 4px;
+     width: 100px;
      color: white;
      font-weight: 600;
  }
@@ -41,7 +41,6 @@
      background: green;
      font-size: 26px;
      border: none;
-     margin: 4px;
      color: white;
      font-weight: 600;
  }
@@ -59,9 +58,31 @@
      text-indent: 10px;
      margin: 6px;
      text-transform: capitalize;
+     margin: 15px;
  }
  
  .opt,
  .Run {
      padding: 2px 14px 2px 13px;
+     margin: 15px;
+ }
+ 
+ .leftside {
+     width: 59%;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .rightside {
+     width: 39%;
+ }
+ 
+ @media screen and (max-width: 700px) {
+     .leftside {
+         width: 100%;
+         flex-direction: column-reverse;
+     }
+     .rightside {
+         width: 100%;
+     }
  }
